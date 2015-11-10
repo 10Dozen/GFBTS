@@ -21,20 +21,22 @@
 			
 			.attr span {
 				font-weight: normal;
-				font-size: 12px;
+				font-size: 12px;				
+				padding: 2px 4px 2px 4px;			
+				border-radius: 20px;
+				border-width: 1px;
+				border-style: solid;
 			}
 			
-			.attr-val-severity-minor {
-				border: 1px solid #597700;
-				background-color: #9FD400;				
-				border-radius: 20px;				
-				
-				padding: 2px 4px 2px 4px;				
+			.attr-val-severity-4 {
+				border-color: #597700;
+				background-color: #9FD400;
 			}
 			
 			.desc {
 				background-color: #ffffff;
-				border: 1px solid #afafaf;
+				border-color: 1px solid #afafaf;
+				
 				margin: 8px 0px 8px 0px;
 				padding: 5px;				
 			}	
@@ -47,7 +49,7 @@
 				<h4>#ID / ProjectName<h4>
 				<h3>Headline \ Summary text</h3>
 				<div class="attr">
-					<div>Severity: <span class="attr-val-severity-minor">MINOR</span></div>
+					<div>Severity: <span class="attr-val-severity-4">MINOR</span></div>
 					<div>Created: <span>1 Nov 2015 10:30:22</span></div>
 					<div>Status: <span class="attr-val-status-open">Open</span></div>					
 				</div>
