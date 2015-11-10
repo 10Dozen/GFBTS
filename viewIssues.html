@@ -1,19 +1,46 @@
 <html>
 	<head>
 		<style>
-
+			body {
+				font-family: sans-serif;
+			}
+			
+			.container {
+				background-color: #dbdbdb;
+				border: 1px solid #6f6f6f;
+				border-radius: 15px;
+				padding: 0px 25px 10px 25px;
+			}
+			
+			.attr div {
+				display: inline;
+				margin-right: 50px;
+				font-weight: bold;
+				font-size: 14px;
+			}
+			
+			.attr-val-severity-minor {
+				border: 1px solid #597700;
+				background-color: #9FD400;				
+				border-radius: 20px;				
+				font-weight: normal;
+				font-size: 12px;
+				padding: 2px 4px 2px 4px;				
+			}
+			
+			
 		</style>
 	</head>
 	<body>
 		<h1>Issues (12)</h1>
 		<div class="wrapper">
 			<div class="container">
-				<h4>ProjectName-ID<h4>
+				<h4>#ID / ProjectName<h4>
 				<h3>Headline \ Summary text</h3>
 				<div class="attr">
-					<div>Severity</div>
-					<div>Timestamp</div>
-					<div>Status</div>					
+					<div>Severity: <span class="attr-val-severity-minor">MINOR</span></div>
+					<div>Created: 1 Nov 2015 10:30:22</div>
+					<div>Status: <div class="attr-val-date">Open</div></div>					
 				</div>
 				<div class="desc">
 					Description text text desc
