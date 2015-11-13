@@ -4,8 +4,8 @@ function doGet() {
 	
 	var htmlHead = "<head><style type='text/css'>body {font-family: sans-serif;}h4 {color: #777;}.container {background-color: #dbdbdb;border: 1px solid #6f6f6f;border-radius: 15px;padding: 0px 25px 10px 25px;margin: 10px 5px 10px 5px;}.attr div {display: inline;margin-right: 50px;font-weight: bold;font-size: 14px;}.attr span {font-weight: normal;font-size: 12px;padding: 2px 4px 2px 4px;border-radius: 20px;border-width: 1px;border-style: solid;}.attr-val-severity-5 {border-color: #597700;background-color: #9FD400;color: white;}.attr-val-severity-4 {border-color: #C36200;background-color: #FFCC99;color: black;}.attr-val-severity-3 {border-color: #D46A00;background-color: #FF9933;color: white;}.attr-val-severity-2 {border-color: #600000;background-color: #990000;color: white;}.attr-val-severity-1 {border-color: #000000;background-color: #252525;color: white;}.desc {background-color: #ffffff;border-color: 1px solid #afafaf;margin: 8px 0px 8px 0px;padding: 9px 15px 9px 15px;}.attr div {color: #555;}.attr-val-status-1 {background-color: #6699FF;border-color: #0046D2;color: white;}.attr-val-status-2 {background-color: #99FF99;border-color: #009900;color: #006E00;}.attr-val-status-3 {background-color: #C2FF0B;border-color: #6C9000;color: #222D00;}</style></head>";
 	var htmlHeader = "<body><h1>Issues (" + issues[0] + ")</h1>";
-
-	return HtmlService.createHtmlOutput(htmlHead + "<body><div class='wrapper'>" + htmlHeader + "</div></body>");
+Logger.log(htmlHead + "<body>" + htmlHeader + "<div class='wrapper'>" + htmlBody + "</div></body>");
+	return HtmlService.createHtmlOutput(htmlHead + "<body>" + htmlHeader + "<div class='wrapper'>" + htmlBody + "</div></body>");
 }
 
 function getIssues() {
@@ -25,13 +25,13 @@ function getIssues() {
 	return [totalCount, issues];
 }
 
-function getFormattedItems() {
+function getFormattedItems(issues) {
 	//issues = [ [ Project, @ListOfIssues ], [Project2, @ListOfIssues] ... ]	
 	var output = "";
 	
 	for (var i = 0; i < issues.length; i++) {
 		var projectName = issues[i][0];
-		var projectIssues = issues[i][1];		
+		var projectIssues = issues[i][1].reverse();		
 		for (var j = 0; j < projectIssues.length; j++) {
 			var issue = projectIssues[j];
 			/*
@@ -85,6 +85,6 @@ function getFormattedItems() {
 				+ '</div></div>';			
 		}
 	}
-	
-	output
+  
+	return output
 }
