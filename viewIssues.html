@@ -1,13 +1,7 @@
 <html>
 	<head>
 		<style type='text/css'>
-			body {
-				font-family: sans-serif;
-			}
 			
-			h4 {
-				color: #777;
-			}
 			
 			.container {
 				background-color: #dbdbdb;
@@ -32,8 +26,7 @@
 				border-width: 1px;
 				border-style: solid;
 			}		
-			
-			
+				
 			.attr-val-severity-5 {
 				border-color: #597700;
 				background-color: #9FD400;
@@ -47,8 +40,8 @@
 			}
 			
 			.attr-val-severity-3 {
-				border-color: #D46A00;
-				background-color: #FF9933;
+				border-color: #b32400;
+				background-color: #ff3300;
 				color: white;
 			}
 			
@@ -66,8 +59,7 @@
 			
 			.desc {
 				background-color: #ffffff;
-				border-color: 1px solid #afafaf;
-				
+				border-color: 1px solid #afafaf;				
 				margin: 8px 0px 8px 0px;
 				padding: 9px 15px 9px 15px;				
 			}
@@ -92,19 +84,197 @@
 				background-color: #C2FF0B;
 				border-color: #6C9000;
 				color: #222D00;
+			}
+
+			body {
+				font-family: sans-serif;
+				margin: 0px;
+			}
+			
+			h4 {
+				color: #777;
+			}
+			
+			.wrapper {
+				padding-top: 250px;
+				background-color: #aa7fc6;				
+			}
+			
+			.header {
+				display: inline;
+				position: fixed;
+				width: 100%;
+				top: -10px;
+				
+				padding-left: 0px;				
+				background-color: #397fc6;
+				color: #f2f2f2;
+			}
+			
+			.header h1 {
+				padding: 0px 20px 0px 0px;
+				margin: 10px 0px 5px 50px;
+			}
+			
+			
+			.nav-bar {
+				width: 100%;				
+				font-size: 12px;				
+			}
+			
+			.nav-bar a {
+				text-decoration: none;
+				color: #f2f2f2;
+			}
+			
+			.nav-bar-sorting {
+				width: 100%;
+				background-color: #007acc;
+				padding: 1px 5px 1px 5px;
 			}			
+			
+			.nav-bar-sorting li {
+				display: inline;				
+				border-radius: 20px;
+				padding: 3px 5px 3px 5px;
+				margin-right: 5px;
+				border: 1px solid #f2f2f2;
+			}
+			
+			.nav-bar-sorting li:hover {				
+				background-color: #80ccff;
+			}
+			
+			.nav-bar-filtering {
+				width: 100%;
+				background-color: #006ab3;
+				padding: 1px 5px 1px 5px;
+			}
+			
+			.nav-bar-filtering li {
+				display: inline;				
+				border-radius: 20px;
+				padding: 3px 5px 3px 5px;
+				margin-right: 5px;
+				border: 1px solid #f2f2f2;
+			}
+			
+			.nav-bar-filtering li:hover {				
+				background-color: #80ccff;
+			}
+			
+			
+			
 		</style>
 	</head>
 	<body>
-		<h1>Issues (12)</h1>
+		<div class="header">
+			<h1>Issues (12)</h1>
+			<div class="nav-bar">
+				<div class="nav-bar-sorting">
+					<ul>
+						<a href="2"><li>All Issues</li></a>
+						<a href="2"><li>Issues By Severity</li></a>
+						<a href="2"><li>Issues By Status</li></a>
+						<a href="2"><li>Issues By Project</li></a>
+					</ul>
+				</div>
+				<div class="nav-bar-filtering">
+					<ul>
+						<a href="2"><li>Blockers</li></a>
+						<a href="2"><li>Criticals</li></a>
+						<a href="2"><li>Majors</li></a>
+						<a href="2"><li>Minors</li></a>
+						<a href="2"><li>Enchancements</li></a>
+					</ul>
+				</div>
+			</div>	
+		</div>
 		<div class="wrapper">
 			<div class="container">
 				<h4>#ID / ProjectName<h4>
 				<h3>Headline \ Summary text</h3>
 				<div class="attr">
-					<div>Severity: <span class="attr-val-severity-4">ENHANCEMENT</span></div>
+					<div>Severity: <span class="attr-val-severity-1">BLOCKER</span>
+					<span class="attr-val-severity-2">CRITICAL</span>
+					<span class="attr-val-severity-3">MAJOR</span>
+					<span class="attr-val-severity-4">MINOR</span>
+					<span class="attr-val-severity-5">ENHANCEMENT</span>
+					
+					</div>
 					<div>Created: <span>1 Nov 2015 10:30:22</span></div>
-					<div>Status: <span class="attr-val-status-2">Resolved</span></div>					
+					<div>Status: <span class="attr-val-status-1">Open</span>
+					<span class="attr-val-status-2">Resolved</span>
+					<span class="attr-val-status-3">Closed</span>
+					</div>					
+				</div>
+				<div class="desc">
+					Description text text desc
+					<br />1. Go to
+					<br />2. Open
+					<br />3. Checl
+					<br />
+					<br />Result:
+					<br />Nothing works
+					<br />
+					<br />Expected Result:
+					<br />All working good!
+				</div>
+				<div class="attach">
+					<div class="attach-item">Link</div>
+					<div class="attach-item">Link</div>
+				</div>					
+			</div>
+			<div class="container">
+				<h4>#ID / ProjectName<h4>
+				<h3>Headline \ Summary text</h3>
+				<div class="attr">
+					<div>Severity: <span class="attr-val-severity-1">BLOCKER</span>
+					<span class="attr-val-severity-2">CRITICAL</span>
+					<span class="attr-val-severity-3">MAJOR</span>
+					<span class="attr-val-severity-4">MINOR</span>
+					<span class="attr-val-severity-5">ENHANCEMENT</span>
+					
+					</div>
+					<div>Created: <span>1 Nov 2015 10:30:22</span></div>
+					<div>Status: <span class="attr-val-status-1">Open</span>
+					<span class="attr-val-status-2">Resolved</span>
+					<span class="attr-val-status-3">Closed</span>
+					</div>					
+				</div>
+				<div class="desc">
+					Description text text desc
+					<br />1. Go to
+					<br />2. Open
+					<br />3. Checl
+					<br />
+					<br />Result:
+					<br />Nothing works
+					<br />
+					<br />Expected Result:
+					<br />All working good!
+				</div>
+				<div class="attach">
+					<div class="attach-item">Link</div>
+					<div class="attach-item">Link</div>
+				</div>					
+			</div>
+			<div class="container">
+				<h4>#ID / ProjectName<h4>
+				<h3>Headline \ Summary text</h3>
+				<div class="attr">
+					<div>Severity: <span class="attr-val-severity-1">BLOCKER</span>
+					<span class="attr-val-severity-2">CRITICAL</span>
+					<span class="attr-val-severity-3">MAJOR</span>
+					<span class="attr-val-severity-4">MINOR</span>
+					<span class="attr-val-severity-5">ENHANCEMENT</span>
+					
+					</div>
+					<div>Created: <span>1 Nov 2015 10:30:22</span></div>
+					<div>Status: <span class="attr-val-status-1">Open</span>
+					<span class="attr-val-status-2">Resolved</span>
+					<span class="attr-val-status-3">Closed</span>
+					</div>					
 				</div>
 				<div class="desc">
 					Description text text desc
